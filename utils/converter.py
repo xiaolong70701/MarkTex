@@ -49,9 +49,10 @@ def generate_pdf(markdown_text: str, mode: str, filename: str = "output"):
     )
 
     if result.returncode != 0:
-        print("❌ XeLaTeX 編譯錯誤：")
-        print(result.stdout)
-        print(result.stderr)
-        raise RuntimeError("LaTeX 編譯失敗，請檢查模板與內容")
+        log_message = result.stdout + "\n" + result.stderr
+        with open("output/compile_error.log", "w", encoding="utf-8") as logf:
+            logf.write(log_message)
+        raise RuntimeError("LaTeX 編譯失敗，請點擊下方按鈕下載錯誤紀錄檔")
+
 
     return pdf_path, tex_path

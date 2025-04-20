@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from utils.converter import generate_pdf
 
@@ -20,3 +21,8 @@ if st.button("📄 產出 PDF"):
                 st.download_button("📄 下載 LaTeX", f, file_name=f"{filename}.tex", mime="application/x-tex")
         except Exception as e:
             st.error(f"❌ 發生錯誤：{e}")
+            log_path = "output/compile_error.log"
+            if os.path.exists(log_path):
+                with open(log_path, "rb") as f:
+                    st.download_button("📄 下載錯誤 Log", f, file_name="compile_error.log")
+
