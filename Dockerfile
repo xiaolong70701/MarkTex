@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
     texlive-fonts-recommended \
     texlive-latex-recommended \
     texlive-latex-extra \
+    texlive-lang-chinese \
     fonts-noto-cjk \
     pandoc \
     fontconfig \
