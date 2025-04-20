@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\defaultfontfeatures{Path=fonts/}
+\setmainfont{Times New Roman.ttf}[
+  BoldFont = Times New Roman Bold.ttf,
+  ItalicFont = Times New Roman Italic.ttf,
+  BoldItalicFont = Times New Roman Bold Italic.ttf
+]
+\setCJKmainfont{cwTeXQMingZH-Medium.ttf}
+
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\title{ MarkTex 自動產出 }
+\author{ Anonymous }
+\date{ 	oday }
+
+\begin{document}
+\maketitle
+
+\section{Hello}\label{hello}
+
+This is a test
+
+\[
+\int_{X} f(x) dx
+\]
+
+
+\end{document}

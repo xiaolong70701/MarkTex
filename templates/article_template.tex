@@ -1,0 +1,27 @@
+\documentclass[12pt]{article}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\defaultfontfeatures{Path=fonts/}
+\setmainfont{Times New Roman.ttf}[
+  BoldFont = Times New Roman Bold.ttf,
+  ItalicFont = Times New Roman Italic.ttf,
+  BoldItalicFont = Times New Roman Bold Italic.ttf
+]
+\setCJKmainfont{cwTeXQMingZH-Medium.ttf}
+
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\title{ {{ title }} }
+\author{ {{ author }} }
+\date{ {{ date }} }
+
+\begin{document}
+\maketitle
+
+{{ content }}
+
+\end{document}
